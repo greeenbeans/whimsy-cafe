@@ -21,7 +21,7 @@ export default [
   {
     ignores: ['src/**/*.d.ts', 'eslint.config.mjs', '.next/**'],
   },
-  ...compat.extends('airbnb', 'prettier', 'next', 'next/core-web-vitals'),
+  ...compat.extends('prettier', 'next', 'next/core-web-vitals'),
   {
     plugins: {
       prettier,

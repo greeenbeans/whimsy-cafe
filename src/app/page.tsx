@@ -1,19 +1,36 @@
-import UserCard from '@/components/custom/UserCard';
-import '@/styles/globals.scss';
-import styles from '@/styles/pages/Home.module.scss';
+'use client';
+
+import '@/app/globals.css';
+import { useState } from 'react';
+import { About, Contact, Header, Hero, Menu, Modal } from '../components';
+import { ModalType } from './types';
 
 export default function Home() {
+  const [activeModal, setActiveModal] = useState<ModalType>(null);
+
+  const openModal = (modalType: ModalType) => setActiveModal(modalType);
+  const closeModal = () => setActiveModal(null);
+
   return (
-    <div className={styles.page}>
-      <h1
-        style={{
-          fontWeight: 500,
-          fontSize: '2em',
-        }}
-      >
-        Hello World!
-      </h1>
-      <UserCard name="Faris" />
-    </div>
+    <main className="min-h-screen bg-gradient-to-br from-lavender-50 to-sage-50">
+      <Header onNavigate={openModal} />
+
+      <div className="relative">
+        <Hero onExplore={() => openModal('menu')} />
+
+        {/* Modals */}
+        <Modal isOpen={activeModal === 'about'} onClose={closeModal} title="About Us">
+          <About />
+        </Modal>
+
+        <Modal isOpen={activeModal === 'menu'} onClose={closeModal} title="Our Menu">
+          <Menu />
+        </Modal>
+
+        <Modal isOpen={activeModal === 'contact'} onClose={closeModal} title="Contact">
+          <Contact />
+        </Modal>
+      </div>
+    </main>
   );
 }

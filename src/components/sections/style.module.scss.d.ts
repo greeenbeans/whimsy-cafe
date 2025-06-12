@@ -1,5 +1,5 @@
 export type Styles = {
-  card: string;
+  button: string;
 };
 
 export type ClassNames = keyof Styles;

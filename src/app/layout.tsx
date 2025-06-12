@@ -1,15 +1,24 @@
-import '@/styles/globals.scss';
 import type { Metadata } from 'next';
+import './globals.css';
+
+import { Inter, Playfair_Display } from 'next/font/google';
 import { type ReactNode } from 'react';
 
-import { DM_Sans as DMSans } from 'next/font/google';
-
-const dmSans = DMSans({ subsets: ['latin'], weight: ['400', '500', '600', '700'] });
-
 export const metadata: Metadata = {
-  title: 'Next Starter Code',
-  description: 'Custom Template by Faris Ashai',
+  title: 'Whimsy Cafe - Artisanal Tea, Matcha & Pastries',
+  description:
+    'A cozy neighborhood cafe serving premium Beverages, fresh pastries, and delightful moments.',
 };
+
+const inter = Inter({
+  subsets: ['latin'],
+  variable: '--font-inter',
+});
+
+const playfair = Playfair_Display({
+  subsets: ['latin'],
+  variable: '--font-playfair',
+});
 
 export default function RootLayout({
   children,
@@ -18,7 +27,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${dmSans.className}`}>{children}</body>
+      <body className={`${inter.variable} ${playfair.variable} font-sans antialiased`}>
+        {children}
+      </body>
     </html>
   );
 }
