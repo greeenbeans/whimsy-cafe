@@ -15,12 +15,14 @@ interface RSVPFormProps {
   eventTitle?: string;
   eventDate?: string;
   eventLocation?: string;
+  eventDescription?: string;
 }
 
 function RSVP({
   eventTitle = 'Summer Cafe!',
-  eventDate = 'June 29, 2025 - 11:00 AM',
-  eventLocation = '750 n Hudson Ave Chicago, IL Unit 306',
+  eventDate = 'June 29, 2025 - 11:00 AM - 4:00 PM',
+  eventLocation = '750 n Hudson Ave Unit 306',
+  eventDescription = 'Drop by anytime between 11:00 AM - 4:00 PM to hang out and enjoy a nice cup of tea, a delicious pastry, and a conversation with friends.',
 }: RSVPFormProps) {
   const [formData, setFormData] = useState<FormData>({
     name: '',
@@ -113,6 +115,7 @@ function RSVP({
           <div className="text-lg text-gray-600 space-y-1">
             <p className="font-semibold">{eventDate}</p>
             <p>{eventLocation}</p>
+            <p>{eventDescription}</p>
           </div>
         </div>
       </motion.div>
