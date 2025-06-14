@@ -19,8 +19,8 @@ interface RSVPFormProps {
 
 function RSVP({
   eventTitle = 'Summer Cafe!',
-  eventDate = 'June 29, 2025',
-  eventLocation = '750 n Hudson Ave',
+  eventDate = 'June 29, 2025 - 11:00 AM',
+  eventLocation = '750 n Hudson Ave Chicago, IL Unit 306',
 }: RSVPFormProps) {
   const [formData, setFormData] = useState<FormData>({
     name: '',

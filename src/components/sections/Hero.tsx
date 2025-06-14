@@ -7,7 +7,7 @@ interface HeroProps {
   onExplore: () => void;
 }
 
-function Hero({ onExplore }: HeroProps) {
+function Hero({}: HeroProps) {
   return (
     <section className="min-h-screen flex items-center justify-center relative overflow-hidden">
       {/* Background Elements */}
