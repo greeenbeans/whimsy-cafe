@@ -1,4 +1,4 @@
-export type ModalType = 'about' | 'menu' | 'contact' | null;
+export type ModalType = 'about' | 'menu' | 'rsvp' | null;
 
 export interface MenuItem {
   id: string;

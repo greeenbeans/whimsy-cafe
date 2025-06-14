@@ -14,6 +14,15 @@ module.exports = {
       backdropBlur: {
         xs: '2px',
       },
+      colors: {
+        lavender: '#E6E6FA',
+        'soft-pink': '#F8E8E8',
+        'sage-green': '#E8F5E8',
+        'dark-lavender': '#B8A9D9',
+        'muted-pink': '#E8C2C2',
+        'forest-green': '#7A8B7A',
+        charcoal: '#2C2C2C',
+      },
     },
   },
   plugins: [],

@@ -2,7 +2,7 @@
 
 import '@/app/globals.css';
 import { useState } from 'react';
-import { About, Contact, Header, Hero, Menu, Modal } from '../components';
+import { About, Header, Hero, Menu, Modal, RSVP } from '../components';
 import { ModalType } from './types';
 
 export default function Home() {
@@ -12,7 +12,12 @@ export default function Home() {
   const closeModal = () => setActiveModal(null);
 
   return (
-    <main className="min-h-screen bg-gradient-to-br from-lavender-50 to-sage-50">
+    <main
+      className="min-h-screen"
+      style={{
+        background: 'linear-gradient(to bottom right,rgb(199, 103, 255),rgb(128, 226, 229))',
+      }}
+    >
       <Header onNavigate={openModal} />
 
       <div className="relative">
@@ -27,8 +32,8 @@ export default function Home() {
           <Menu />
         </Modal>
 
-        <Modal isOpen={activeModal === 'contact'} onClose={closeModal} title="Contact">
-          <Contact />
+        <Modal isOpen={activeModal === 'rsvp'} onClose={closeModal} title="RSVP">
+          <RSVP />
         </Modal>
       </div>
     </main>
