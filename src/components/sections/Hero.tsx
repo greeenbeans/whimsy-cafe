@@ -29,7 +29,7 @@ function Hero({}: HeroProps) {
           </h1>
 
           <p className="text-xl md:text-2xl text-forest-green mb-8 max-w-2xl mx-auto font-light">
-            Where every cup tells a story and every moment blooms with flavor
+            Spreading whimsy one cup at a time
           </p>
         </motion.div>
       </div>
