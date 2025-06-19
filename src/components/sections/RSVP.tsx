@@ -134,7 +134,7 @@ function RSVP({
             name="name"
             value={formData.name}
             onChange={handleInputChange}
-            className={`w-full px-3 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 ${
+            className={`w-full px-3 text-gray-700 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 ${
               errors.name ? 'border-red-500' : 'border-gray-300'
             }`}
             placeholder="Enter your full name"
@@ -152,7 +152,7 @@ function RSVP({
             name="guestCount"
             value={formData.guestCount}
             onChange={handleInputChange}
-            className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+            className="w-full px-3 py-2 text-gray-700 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
           >
             {[1, 2, 3, 4, 5].map(num => (
               <option key={num} value={num}>
@@ -175,7 +175,7 @@ function RSVP({
               name="guestNames"
               value={formData.guestNames}
               onChange={handleInputChange}
-              className={`w-full px-3 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 ${
+              className={`w-full px-3 py-2 text-gray-700 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 ${
                 errors.name ? 'border-red-500' : 'border-gray-300'
               }`}
               placeholder="Enter the full name of your guests (so theyre on the list)"
@@ -185,7 +185,7 @@ function RSVP({
           </div>
         )}
 
-        {/* Dietary Restrictions - Only show if attending */}
+        {/* Dietary Restrictions */}
         <div>
           <label htmlFor="restrictions" className="block text-sm font-medium text-gray-700 mb-1">
             Dietary Restrictions or Allergies
@@ -196,7 +196,7 @@ function RSVP({
             name="restrictions"
             value={formData.restrictions}
             onChange={handleInputChange}
-            className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+            className="w-full px-3 py-2 text-gray-700 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
             placeholder="Please let us know of any dietary needs"
           />
         </div>
