@@ -125,7 +125,7 @@ function RSVP({
 
         {/* Name */}
         <div>
-          <label htmlFor="name" className="block text-sm font-medium text-charcoal mb-1">
+          <label htmlFor="name" className="block text-sm font-medium text-gray-800 mb-1">
             Full Name *
           </label>
           <input
@@ -134,7 +134,7 @@ function RSVP({
             name="name"
             value={formData.name}
             onChange={handleInputChange}
-            className={`w-full px-3 text-charcoal py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 ${
+            className={`w-full px-3 text-gray-800 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 ${
               errors.name ? 'border-red-500' : 'border-gray-300'
             }`}
             placeholder="Enter your full name"
@@ -144,7 +144,7 @@ function RSVP({
 
         {/* Guest Count -*/}
         <div>
-          <label htmlFor="guestCount" className="block text-sm font-medium text-charcoal mb-1">
+          <label htmlFor="guestCount" className="block text-sm font-medium text-gray-800 mb-1">
             Number of Guests (including yourself)
           </label>
           <select
@@ -152,7 +152,7 @@ function RSVP({
             name="guestCount"
             value={formData.guestCount}
             onChange={handleInputChange}
-            className="w-full px-3 py-2 text-charcoal border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+            className="w-full px-3 py-2 text-gray-800 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
           >
             {[1, 2, 3, 4, 5].map(num => (
               <option key={num} value={num}>
@@ -166,7 +166,7 @@ function RSVP({
         {/* Guest Names - Only show if attending */}
         {formData.guestCount !== 1 && (
           <div>
-            <label htmlFor="guestNames" className="block text-sm font-medium text-charcoal mb-1">
+            <label htmlFor="guestNames" className="block text-sm font-medium text-gray-800 mb-1">
               Number of Guests (including yourself)
             </label>
             <input
@@ -175,7 +175,7 @@ function RSVP({
               name="guestNames"
               value={formData.guestNames}
               onChange={handleInputChange}
-              className={`w-full px-3 py-2 text-charcoal border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 ${
+              className={`w-full px-3 py-2 text-gray-800 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 ${
                 errors.name ? 'border-red-500' : 'border-gray-300'
               }`}
               placeholder="Enter the full name of your guests (so theyre on the list)"
@@ -187,7 +187,7 @@ function RSVP({
 
         {/* Dietary Restrictions */}
         <div>
-          <label htmlFor="restrictions" className="block text-sm font-medium text-charcoal mb-1">
+          <label htmlFor="restrictions" className="block text-sm font-medium text-gray-800 mb-1">
             Dietary Restrictions or Allergies
           </label>
           <input
@@ -196,7 +196,7 @@ function RSVP({
             name="restrictions"
             value={formData.restrictions}
             onChange={handleInputChange}
-            className="w-full px-3 py-2 text-charcoal border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+            className="w-full px-3 py-2 text-gray-800 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
             placeholder="Please let us know of any dietary needs"
           />
         </div>
