@@ -8,7 +8,6 @@ export default function About() {
             time. The goal of each event is to create a welcoming space where people can hang out
             and enjoy a nice cup of tea, a delicious pastry, and a conversation with friends. Our
             next event is scheduled for June 29th. If you are interested in attending, please RSVP.
-            If you have any questions, text me at +1-909-477-0300
           </p>
         </div>
       </div>
